@@ -1,0 +1,280 @@
+<!DOCTYPE HTML>
+<!-- <html lang="en-US"> -->
+<html lang="en-US" class="fade nonumbers">
+<!--
+  ^ a class of "fade" makes slides fade smoothly into one another
+ -->
+<!-- <html lang="en-US" class="nonumbers"> -->
+<!--
+  If you want no numbers on the slides add a "nonumbers" class
+  to the HTML element.
+  Adding a class of "fade" will make slides fade into another.
+-->
+<head>
+  <meta charset="UTF-8">
+  <title>Why Rust is awesome?</title>
+<!--
+  If you upload your slides to the web, ensure that you have
+  a good title - this shows up in search results and social
+  media links
+ -->
+  <meta name="viewport" content="width=device-width, user-scalable=yes">
+  <link rel="stylesheet" href="themes/mozilla/styles/style.css">
+</head>
+<body class="list">
+
+  <header class="caption">
+    <h1>Why Rust is awesome?</h1>
+    <p class="footer">
+      Giovanny Gongora,
+      <a href="http://twitter.com/Gioyik">@Gioyik</a>
+    </p>
+  </header>
+  <aside class="talkdescription">
+    <p><button onclick="goFullScreen()">Fullscreen</button></p>
+    <p class="abstract">
+      <strong>Abstract: </strong>
+       Rust is a systems programming language focused on three goals: safety, speed, and concurrency. It maintains these goals without having a garbage collector, making it a useful language for a number of use cases other languages aren’t good at: embedding in other languages, programs with specific space and time requirements, and writing low-level code, like device drivers and operating systems. It improves on current languages targeting this space by having a number of compile-time safety checks that produce no runtime overhead, while eliminating all data races. Rust also aims to achieve ‘zero-cost abstractions’ even though some of these abstractions feel like those of a high-level language. Even then, Rust still allows precise control like a low-level language would.
+    </p>
+  </aside>
+
+<!--
+    Simply copy the whole block for each slide you want.
+  Special slides get extra classes. Each slide needs an ID
+  to allow for bookmarking and target jumping.
+-->
+
+  <div id="cover" class="slide"><div>
+    <section>
+      <header>
+        <h2></h2>
+      </header>
+      <img src="pictures/rust/rust.png"
+           class="middle shadow" height="400"
+           alt="Rust logo">
+      <small class="byline">
+      </small>
+      <footer class="notes">
+      </footer>
+    </section>
+  </div></div>
+
+<!-- end slide block -->
+
+<!-- ===================================================================
+Firefox OS
+======================================================================== -->
+
+  <div id="zomgrust" class="slide shout"><div>
+    <section>
+      <header>
+        <h2>RUST</h2>
+      </header>
+    <footer class="notes">
+    </footer>
+    </section>
+  </div></div>
+
+  <div id="me" class="slide"><div>
+    <section>
+      <header>
+        <h2>About me</h2>
+      </header>
+      <img src="pictures/mozillaoverview/redpanda.jpg" class="right" alt="Red panda (Firefox)">
+      <ul class="nobull">
+        <li>Giovanny Gongora</li>
+        <li><a href="http://twitter.com/Gioyik">@Gioyik</a></li>
+        <li><strong>Website</strong>: gioyik.com</li>
+        </br>
+        <li><strong>SPOILER ALERT:</strong> I will be hired by Mozilla to work with Developer Relations team</li>
+      </ul>
+      <small class="credits">
+      </small>
+
+    <footer class="notes">
+    </footer>
+
+    </section>
+  </div></div>
+
+  <div id="rustbullets" class="slide"><div>
+    <section>
+      <header>
+        <h2>Brief Introduction</h2>
+      </header>
+      <ul>
+        <li>First inventor: Graydon Hoare (8 years ago)</li>
+        <li>Mozilla Foundation (~2009)</li>
+        <li>Zero-cost abstraction</li>
+        <li>High concurrency support</li>
+        <li>Memory safety by ownership</li>
+        <li>Lifetime concept</li>
+        <li>Servo <3</li>
+      </ul>
+    <footer class="notes">
+    </footer>
+    </section>
+  </div></div>
+
+  <div id="rustownership" class="slide shout"><div>
+    <section>
+      <header>
+        <h2 class="medium">Ownership</h2>
+      </header>
+    <footer class="notes">
+    </footer>
+    </section>
+  </div></div>
+
+  <div id="rustmemory" class="slide shout"><div>
+    <section>
+      <header>
+        <h2 class="medium">Memory management</h2>
+      </header>
+    <footer class="notes">
+    </footer>
+    </section>
+  </div></div>
+
+  <div id="languagesmanage" class="slide"><div>
+    <section>
+      <header>
+        <h2>What do other languages do?</h2>
+      </header>
+      <ul>
+        <li>Most languages with a garbage collector heap-allocate by default</li>
+        <li>Every value is boxed</li>
+        <li>There are some possible optimizations that don’t make it true 100% of the time</li>
+      </ul>
+      <footer class="notes">
+      </footer>
+    </section>
+  </div></div>
+
+  <div id="runtimeeffic" class="slide"><div>
+    <section>
+      <header>
+        <h2>Runtime Efficiency</h2>
+      </header>
+      <ul>
+        <li>Managing the memory for the stack is trivial</li>
+        <li>Managing memory for the heap is non-trivial</li>
+      </ul>
+      <footer class="notes">
+      </footer>
+    </section>
+  </div></div>
+
+  <div id="concurrency" class="slide shout"><div>
+    <section>
+      <header>
+        <h2 class="medium">Concurrency</h2>
+      </header>
+    <footer class="notes">
+    </footer>
+    </section>
+  </div></div>
+
+  <div id="rustinside" class="slide shout"><div>
+    <section>
+      <header>
+        <h2 class="medium">Rust Inside Other Languages</h2>
+      </header>
+    <footer class="notes">
+    </footer>
+    </section>
+  </div></div>
+
+  <div id="theproblem" class="slide"><div>
+    <section>
+      <header>
+        <h2>The problem</h2>
+      </header>
+      <ul>
+        <p><strong>Start ten threads. Inside each thread, count from one to five million. After all ten threads are finished, print out 'done!'.</strong></p>
+        <li>Rust has something called a 'foreign function interface', often shortened to 'FFI'</li>
+        <li>Rust has support for FFI in both directions</li>
+        <li>Let's try it with examples in Ruby, Python, and JavaScript</li>
+      </ul>
+      <footer class="notes">
+      </footer>
+    </section>
+  </div></div>
+
+  <div id="crates" class="slide shout"><div>
+    <section>
+      <header>
+        <h2 class="medium">Crates and Modules</h2>
+      </header>
+    <footer class="notes">
+    </footer>
+    </section>
+  </div></div>
+
+  <div id="webapis" class="slide h"><div>
+    <section>
+      <header>
+        <h2>Web APIs</h2>
+      </header>
+      <img src="pictures/fxos/webapiwiki.png" height="400" class="middle shadow" alt="WebAPI wiki">
+      <p class="demourl">
+        <a href="https://wiki.mozilla.org/WebAPI">WebAPI Wiki</a>
+      </p>
+    <footer class="notes">
+      The WebAPI effort of Mozilla is tracked and described on the wiki.
+    </footer>
+    </section>
+  </div></div>
+
+  <div id="nextrust" class="slide"><div>
+    <section>
+      <header>
+        <h2>So, what's next for Rust?</h2>
+      </header>
+      <figure class="right shadow frame">
+        <img src="pictures/fxos/nokia-photos.jpg"
+             alt="Nokia couldn't take photos"
+             height="400">
+      </figure>
+      <ul class="longlist">
+        <li>Compiler Plugins</li>
+        <li>Inline Assembly</li>
+        <li>No stdlib</li>
+        <li>Advanced linking</li>
+        <li>Benchmark Test</li>
+        <li>... and more, trust me :)</li>
+      </ul>
+      <footer class="notes">
+      </footer>
+    </section>
+  </div></div>
+
+  <div id="thanks" class="slide"><div>
+    <section>
+      <header>
+        <h2>Thanks</h2>
+      </header>
+      <img src="pictures/mozillaoverview/redpanda.jpg" class="right" alt="Red panda (Firefox)">
+      <ul class="nobull">
+        <li>Giovanny Gongora</li>
+        <li><strong>Why Rust is awesome?</strong></li>
+        <li><a href="http://twitter.com/Gioyik">@Gioyik</a></li>
+        <li><strong>Website</strong>: gioyik.com</li>
+      </ul>
+      <small class="credits">
+      </small>
+
+    <footer class="notes">
+    </footer>
+
+    </section>
+  </div></div>
+
+  <!--
+    To hide progress bar from entire presentation
+    just remove “progress” element.
+  <div class="progress"><div></div></div>-->
+  <script src="scripts/script.js"></script>
+  <!-- Copyright © 2010–2012 Vadim Makeev — pepelsbey.net -->
+</body>
+</html>
