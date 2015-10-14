@@ -38,12 +38,6 @@
     </p>
   </aside>
 
-<!--
-    Simply copy the whole block for each slide you want.
-  Special slides get extra classes. Each slide needs an ID
-  to allow for bookmarking and target jumping.
--->
-
   <div id="cover" class="slide"><div>
     <section>
       <header>
@@ -58,12 +52,6 @@
       </footer>
     </section>
   </div></div>
-
-<!-- end slide block -->
-
-<!-- ===================================================================
-Firefox OS
-======================================================================== -->
 
   <div id="zomgrust" class="slide shout"><div>
     <section>
@@ -80,7 +68,7 @@ Firefox OS
       <header>
         <h2>About me</h2>
       </header>
-      <img src="pictures/mozillaoverview/redpanda.jpg" class="right" alt="Red panda (Firefox)">
+      <img src="pictures/rust/firefox.png" height="400" class="right" alt="Red panda (Firefox)">
       <ul class="nobull">
         <li>Giovanny Gongora</li>
         <li><a href="http://twitter.com/Gioyik">@Gioyik</a></li>
@@ -116,6 +104,16 @@ Firefox OS
     </section>
   </div></div>
 
+  <div id="andthatlife" class="slide shout"><div>
+    <section>
+      <header>
+        <h2 class="medium">and that in real life...</h2>
+      </header>
+    <footer class="notes">
+    </footer>
+    </section>
+  </div></div>
+
   <div id="rustownership" class="slide shout"><div>
     <section>
       <header>
@@ -123,6 +121,22 @@ Firefox OS
       </header>
     <footer class="notes">
     </footer>
+    </section>
+  </div></div>
+
+  <div id="theproblem" class="slide"><div>
+    <section>
+      <header>
+        <h2>Safety</h2>
+      </header>
+      <ul>
+        <p>Problems related to safety cause not only software crash, also security vulnerabilities.</p>
+        <li>Null pointer deference</li>
+        <li>Double free</li>
+        <li>Use-after-free (more pointer problems..)</li>
+      </ul>
+      <footer class="notes">
+      </footer>
     </section>
   </div></div>
 
@@ -145,6 +159,23 @@ Firefox OS
         <li>Most languages with a garbage collector heap-allocate by default</li>
         <li>Every value is boxed</li>
         <li>There are some possible optimizations that don’t make it true 100% of the time</li>
+      </ul>
+      <footer class="notes">
+      </footer>
+    </section>
+  </div></div>
+
+  <div id="garbaje" class="slide"><div>
+    <section>
+      <header>
+        <h2>Garbaje Collection</h2>
+      </header>
+      <ul>
+        <li>Computer cannot know the exact timing that each object should be freed</li>
+        <li>Need of more memory and CPU power</li>
+        <li>No predictability</li>
+        <li>Limited concurrency</li>
+        <li>Large code size</li>
       </ul>
       <footer class="notes">
       </footer>
@@ -211,6 +242,24 @@ Firefox OS
     </section>
   </div></div>
 
+  <div id="theproblem" class="slide"><div>
+    <section>
+      <header>
+        <h2>Crates and Modules</h2>
+      </header>
+      <ul class="longlist">
+        <p><strong>When a project starts getting large, it’s considered good software engineering practice to split it up into a bunch of smaller pieces, and then fit them together.</strong></p>
+        <li>Rust has a module system</li>
+        <li>A crate is synonymous with a 'library' or 'package' in other languages</li>
+        <li>"Cargo" as the name of Rust’s package management tool</li>
+        <li>Crates can produce an executable or a library, depending on the project</li>
+        <li>Modules allow you to partition your code</li>
+      </ul>
+      <footer class="notes">
+      </footer>
+    </section>
+  </div></div>
+
   <div id="webapis" class="slide h"><div>
     <section>
       <header>
@@ -232,9 +281,9 @@ Firefox OS
         <h2>So, what's next for Rust?</h2>
       </header>
       <figure class="right shadow frame">
-        <img src="pictures/fxos/nokia-photos.jpg"
+        <img src="pictures/rust/rustacean.png"
              alt="Nokia couldn't take photos"
-             height="400">
+             height="300">
       </figure>
       <ul class="longlist">
         <li>Compiler Plugins</li>
@@ -249,12 +298,22 @@ Firefox OS
     </section>
   </div></div>
 
+  <div id="play" class="slide shout"><div>
+    <section>
+      <header>
+        <h2 class="medium">play.rust-lang.org</h2>
+      </header>
+    <footer class="notes">
+    </footer>
+    </section>
+  </div></div>
+
   <div id="thanks" class="slide"><div>
     <section>
       <header>
         <h2>Thanks</h2>
       </header>
-      <img src="pictures/mozillaoverview/redpanda.jpg" class="right" alt="Red panda (Firefox)">
+      <img src="pictures/rust/firefox.png" height="400" class="right" alt="Red panda (Firefox)">
       <ul class="nobull">
         <li>Giovanny Gongora</li>
         <li><strong>Why Rust is awesome?</strong></li>
@@ -270,11 +329,7 @@ Firefox OS
     </section>
   </div></div>
 
-  <!--
-    To hide progress bar from entire presentation
-    just remove “progress” element.
-  <div class="progress"><div></div></div>-->
+  <!--<div class="progress"><div></div></div>-->
   <script src="scripts/script.js"></script>
-  <!-- Copyright © 2010–2012 Vadim Makeev — pepelsbey.net -->
 </body>
 </html>
